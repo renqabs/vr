@@ -112,7 +112,7 @@ async def list_models(app_secret: str = Depends(verify_app_secret)):
     return ModelList(data=models)
 
 
-@app.post("/v1/chat/completions")
+@app.post("/yyds/v1/chat/completions")
 async def chat_completions(request: ChatRequest, app_secret: str = Depends(verify_app_secret)):
     logger.info(f"Received chat completion request for model: {request.model}")
     logger.info(f"request_message: {request.messages}")
